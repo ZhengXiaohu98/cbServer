@@ -11,6 +11,10 @@ app.use("/getinfo", (req, res) => {
   res.json({msg:"hello"})
 })
 
+// Add User router
+const usersRouter = require("./routes/users")
+app.use("/api/users", usersRouter)
+
 const PORT = process.env.PORT || 5007
 app.listen(PORT)
 console.log('Server is listen at port ' + PORT)
