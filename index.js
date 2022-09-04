@@ -11,6 +11,11 @@ app.use("/getinfo", (req, res) => {
   res.json({msg:"hello"})
 })
 
+// Using passport to verify token
+const passport = require('passport')
+app.use(passport.initialize())
+require('./configu/passport')(passport)
+
 // Add User router
 const usersRouter = require("./routes/users")
 app.use("/api/users", usersRouter)
