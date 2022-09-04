@@ -1,6 +1,9 @@
 const express = require("express")
 const app = express()
 
+const mongoose = require("mongoose")
+mongoose.connect("mongodb+srv://xiaohu:1228@cluster0.hhkzd3t.mongodb.net/?retryWrites=true&w=majority")
+
 const cors = require('cors')
 app.use(cors())
 
