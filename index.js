@@ -7,6 +7,9 @@ mongoose.connect("mongodb+srv://xiaohu:1228@cluster0.hhkzd3t.mongodb.net/?retryW
 const cors = require('cors')
 app.use(cors())
 
+// Allow the server accpet json
+app.use(express.json())
+
 app.use("/getinfo", (req, res) => {
   res.json({msg:"hello"})
 })
